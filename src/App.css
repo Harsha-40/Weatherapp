@@ -1,0 +1,136 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+.app {
+  max-width: 400px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px;
+  border: 2px solid #007BFF;
+  border-radius: 8px;
+  margin-right: 10px;
+  flex: 1;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.weather-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.weather-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #343a40;
+}
+
+.weather-info p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  animation: shake 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.sunny {
+  background-color: #FFDD57;
+  background-image: linear-gradient(45deg, #FFDD57, #FDB813);
+}
+
+.cloudy {
+  background-color: #A0AEC0;
+  background-image: linear-gradient(45deg, #CBD5E0, #A0AEC0);
+}
+
+.rainy {
+  background-color: #4A5568;
+  background-image: linear-gradient(45deg, #718096, #4A5568);
+}
+
+.snowy {
+  background-color: #E2E8F0;
+  background-image: linear-gradient(45deg, #EDF2F7, #E2E8F0);
+}
+
